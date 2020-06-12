@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Roboto, sans-serif;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+
+.todo-form {
+    display: flex;
+    margin: 0;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0rem 1rem;
+}
+
+form {
+    background: white;
+}
+
+form input, form button {
+    padding: .5rem 1rem;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    background: white;
+    outline: none;
+}
+
+form button {
+    cursor: pointer;
+    background-color: #6138b1;
+    color:#fff;
+    transition: all .5s ease;
+}
+
+form button:hover {
+    background-color: #2b135a;
+    color:#ccc;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 1rem;
+}
+
+.todo {
+    background: white;
+    margin: .25rem;
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo-item {
+    list-style: none;
+    flex: 1;
+    font-size: 1rem;
+    padding: .5rem;
+}
+
+button.checked-button, button.delete-button {
+    cursor: pointer;
+    color: #fff;
+    transition: all .5s ease;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    height: 35px;
+    transition: all .3s ease;
+}
+
+button.checked-button {
+    background-color: #377b36;
+}
+
+button.delete-button {
+    background-color: #bb0707;
+}
+
+button.checked-button:hover {
+    background-color: #174c16;
+}
+
+button.delete-button:hover {
+    background-color: #ca484e;
+}
+
+.todo.completed li {
+    text-decoration: line-through;
+}
+.todo.completed {
+    transition: all .3s ease;
+    opacity: .7;
+}
+
+.todo-form select {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 15vw;
+    padding: .5rem 1rem;
+}
+.select {
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+
+}
+.select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #298a8a;
+    pointer-events: none;
+    padding: .5rem 1rem;
+}
+.fall {
+   transition: all .5s ease;
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
